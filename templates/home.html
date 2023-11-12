@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<center>
+<form action="login" method="post" style="background-color: black; color :aliceblue">
+  <center><h1>Welcome to our project repository </h1></center>
+  <center><h1>Register to access our projects </h1></center>
+  {% csrf_token %}
+  Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" style="color: aliceblue;"><br>
+  Mobile number<input type="number" name="number" style="color: aliceblue;"><br>
+  Roll no&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="roll" style="color: aliceblue;"><br>
+  <input type="submit">
+</form>
+</center>
+{% endblock %}

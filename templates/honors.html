@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1 style="color: aliceblue;">Teams Page</h1>
+
+<table class="table" style="color: aliceblue;">
+    <tr>
+        <th> Name </th>
+        <th>Team Member Count</th>
+        <th>Project Name</th>
+        <th>Project Link</th>
+    </tr>
+    {% for team in teams %}
+    <tr>
+        <td> {{ team.name }} </td>
+        <td>{{ team.team_member_count }}</td>
+        <td>{{ team.project_name }}</td>
+        <td><a href="{{ team.project_link }}">{{ team.project_link }}</a></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
